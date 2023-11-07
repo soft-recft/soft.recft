@@ -111,41 +111,41 @@
     color: #777;
   }
 
-/* Limit the carousel container to the size of the images */
-.carousel-inner {
-  max-width: 600px; /* Same as the image width */
-  overflow: hidden;
-}
-.carousel-inner img {
-  max-width: 100%; /* Ensure the image fits within the container */
-  height: auto; /* Maintain aspect ratio */
+/* Center the carousel container both horizontally and vertically */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Limit the carousel container to the size of the images */
+.carousel-inner {
+  max-width: 700px; 
+  overflow: hidden;
+  margin: 0 auto;  
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Center the carousel controls horizontally */
 .carousel-control-prev, .carousel-control-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1; /* Place controls above the images */
 }
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  left: 42%; /* Center horizontally */
-  transform: translateX(-42%); /* Center horizontally */
-  margin-bottom: 0;
-}
+
+/* Adjust the position of the control icons */
 .carousel-control-prev {
   left: 0;
   right: auto;
 }
 
+/* Adjust the position of the control icons */
 .carousel-control-next {
-  right: 0;
-  left: auto;
-}
-
-/* Adjust the right control icon to align with the right edge of the image */
-.carousel-control-next span {
   right: 0;
   left: auto;
 }
